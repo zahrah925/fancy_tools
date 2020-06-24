@@ -76,5 +76,5 @@ fi
 
 
 cd ~/bin
-cp ~/src/fancy_tools/bin/updateFancyTools ~/bin/updateFancyTools
+cp ~/src/fancy_tools/bin/updateFancyTools ~/bin
 chmod +x updateFancyTools
