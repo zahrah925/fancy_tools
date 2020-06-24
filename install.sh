@@ -11,7 +11,7 @@ function write_to_file
     fi
 }
 
-current_path="$(pwd)"
+current_path="~/src/fancy_tools"
 #source .aliases in bashrc
 line="source $current_path/.aliases"
 file=~/.bashrc
@@ -37,6 +37,7 @@ then
     echo "Folder bin already exists."
 else
     mkdir ~/bin
+    echo "Folder bin created"
 fi
 
 
