@@ -7,11 +7,27 @@ function gco
     if [[ $inside_git == "true" ]]
     then
 
-		echo "Inside a git repos"
+	if [[ $# < 1 ]]
+	then
+	  	echo "Error! There is no commit message"
+	    	echo "Retry and add the commit message after gco"
+
+	else
+	    	echo "Inside a git repos"
+	    	echo " "
+
+      	    	#verify current branch
+	    	current_branch="$(git rev-parse --abbrev-ref HEAD)"
+	    	echo "On branch $current_branch"
+	    	echo " "
+            	git commit -m "[$current_branch] $*"
+       	        echo "Commit message = [$current_branch] $*"
+
+	fi
 
     else
 
-		echo "Not inside a git repos"
+	echo "ERROR!!! Not inside a git repos"
 
     fi
 }

@@ -12,14 +12,16 @@ function write_to_file
 }
 
 current_path="$(pwd)"
-
+#source .aliases in bashrc
 line="source $current_path/.aliases"
 file=~/.bashrc
 grep -qF -- "$line" "$file" || echo "$line" >> "$file"
 
+#source fancy_funtions.sh in bashrc
 line="source $current_path/fancy_functions.sh"
 file=~/.bashrc
 grep -qF -- "$line" "$file" || echo "$line" >> "$file"
+
 
 if [ $? -ne 0 ]
 then
@@ -28,6 +30,7 @@ else
     echo "success to write file .aliases and fancy_funtions.sh in ~/.bashrc"
 fi
 
+
 #folder~/bin
 if [[ -d ~/bin ]]
 then
@@ -35,6 +38,7 @@ then
 else
     mkdir ~/bin
 fi
+
 
 #export path
 cd ~/bin
@@ -47,8 +51,9 @@ if grep -q "$export_path" <<< "$bashrc"; then
 	echo "PATH already added in ~/.bashrc"
 else
 	echo "export PATH=$PATH:$new_path" >> ~/.bashrc
-        echo "Successfully added PATH to ~/.bashrc"
+        echo "Successfully exported PATH to ~/.bashrc"
 fi
+
 
 #folder~/src
 if [[ -d ~/src ]]
@@ -58,6 +63,7 @@ else
     mkdir ~/src
 fi
 
+
 cd ~/src
 #clone in ~/src
 if [[ -d ~/src/fancy_tools ]]
@@ -65,6 +71,7 @@ then
     echo "Already cloned fancy_tools"
 else
     git clone --single-branch --branch master https://github.com/zahrah925/fancy_tools.git
+    echo "Successfully cloned fancy_tools in ~/src"
 fi
 
 
