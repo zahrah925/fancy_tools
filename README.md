@@ -18,7 +18,7 @@ This paragraph has some `inline code`.
 - You can now see the execution lines in bashrc
   - $source ~/.bashrc
 
-- Aliases can now be used
+- Aliases can now be used:
   -$gss  >> for git status
   -$gco  >> for git commit and to know the current branch
 
