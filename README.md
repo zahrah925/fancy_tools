@@ -19,6 +19,7 @@ This paragraph has some `inline code`.
   - $source ~/.bashrc
 
 - Aliases can now be used
+
   -$gss  >> for git status
   -$gco  >> for git commit and to know the current branch
 
