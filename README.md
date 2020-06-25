@@ -13,6 +13,7 @@ This paragraph has some `inline code`.
 
 - Install the functions
   - $./install.sh
+  - $chmod +x install.sh
 
 - You can now see the execution lines in bashrc
   - $source ~/.bashrc
