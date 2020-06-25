@@ -1,7 +1,7 @@
 # fancy_tools
 ## Description on how to install the project
 
-** Steps:  **
+** Steps: **
 This paragraph has some `inline code`.
 
 - Copy and clone the github project on your terminal.
