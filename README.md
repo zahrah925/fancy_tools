@@ -19,9 +19,8 @@ This paragraph has some `inline code`.
   - $source ~/.bashrc
 
 - Aliases can now be used
-
-  -$gss  >> for git status
-  -$gco  >> for git commit and to know the current branch
+  -$gss  >> for git status.
+  -$gco  >> for git commit and to know the current branch.
 
 - In home, there is now a folder src in which there is a copy of the project fancy_tools and a folder bin which contains updateFancyTools.
 
